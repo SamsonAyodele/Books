@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Book } from '../Types/Book';
+
+
+
 
 @Component({
   selector: 'app-books',
@@ -7,23 +11,36 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BooksComponent implements OnInit {
 
-  name : string = 'Clean Code in Angular'
-  author : string = 'Samson Ayodele'
-  src : string = 'https://m.media-amazon.com/images/I/41SH-SvWPxL.jpg'
+  books : Book[] = [
+    {
+      name :  'Clean Code in Angular',
+      author :  'Samson Ayodele',
+      image :  'https://m.media-amazon.com/images/I/41SH-SvWPxL.jpg',
+      amount: 700
+    },
+    {
+      name : 'Clean Code in C#',
+      author : 'Ikenna Ogbona',
+      image :  'https://m.media-amazon.com/images/I/41aXRMhToeL._SX404_BO1,204,203,200_.jpg',
+      amount: 800
+    },
+    {
+      name :  'Clean Code in Angular',
+      author :  'Samson Ayodele',
+      image :  'https://m.media-amazon.com/images/I/41SH-SvWPxL.jpg',
+      amount: 900
+    },
+    {
+      name : 'Clean Code in C#',
+      author : 'Ikenna Ogbona',
+      image :  'https://m.media-amazon.com/images/I/41aXRMhToeL._SX404_BO1,204,203,200_.jpg',
+      amount: 1000
+    }
+  ]
 
-  name2 : string = 'Clean Code in C#'
-  author2 : string = 'Ikenna Ogbona'
-  src2: string = 'https://m.media-amazon.com/images/I/41aXRMhToeL._SX404_BO1,204,203,200_.jpg'
+  isShowing : boolean = false;
 
-  name3 : string = 'Clean Code in Angular'
-  author3 : string = 'Samson Ayodele'
-  src3 : string = 'https://m.media-amazon.com/images/I/41SH-SvWPxL.jpg'
-
-  name4 : string = 'Clean Code in C#'
-  author4 : string = 'Ikenna Ogbona'
-  src4 : string = 'https://m.media-amazon.com/images/I/41aXRMhToeL._SX404_BO1,204,203,200_.jpg'
-
-  isDisabled : boolean = false;
+  cart : Book[] = [];
 
   constructor() { }
 
@@ -31,8 +48,17 @@ export class BooksComponent implements OnInit {
   }
 
   showBooks() {
-    this.isDisabled = true;
-    alert("is working")
+    this.isShowing = !this.isShowing;
+    // alert("is working")s
+  }
+// myName : string = '';
+// handleInput(event: any){
+//     this.myName = event.target.value;
+// }
+
+  addToCart(book: Book) {
+    console.log(book);
+
   }
 
 }

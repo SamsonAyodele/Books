@@ -1,0 +1,8 @@
+<!-- <p>bookk works!</p> -->
+<li class="books">
+  <!-- <p class="sn">{{i + 1}}</p> -->
+  <img src="{{ bookk.image }}" alt="{{ bookk.name | titlecase }}" width="100">
+  <p class="title">{{ bookk.name | titlecase}} by  <br> {{ bookk.author | titlecase }}</p>
+  <p class="price">{{ bookk.amount | currency}}</p>
+  <button (click)="addToCart()">Add to cart</button>
+</li>
