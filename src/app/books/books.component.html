@@ -2,16 +2,20 @@
 
 <h2>Programming Book List!</h2>
 
-<button (click)="showBooks()">
+<!-- <button (click)="showBooks()">
   <ng-container *ngIf="!isShowing">Show Books </ng-container >
   <ng-container *ngIf="isShowing">Hide Books</ng-container >
-</button>
+</button> -->
 <!-- <input type="text" [(ngModel)]="myName"> -->
 <!-- <p>{{ myName }}</p> -->
 
-<ul *ngIf="isShowing">
+<ul > <!-- *ngIf="isShowing" -->
   <ng-container *ngFor="let book of books; let i = index">
-    <app-bookk (bookEmitter)="addToCart($event)" [bookk]="book"></app-bookk>
+    <app-bookk  [bookk]="book"></app-bookk>
   </ng-container>
 </ul>
+
+
+
+
 

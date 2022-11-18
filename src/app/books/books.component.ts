@@ -16,24 +16,24 @@ export class BooksComponent implements OnInit {
 
   books : Book[] = []
 
-  isShowing : boolean = false;
+  // isShowing : boolean = false;
 
-  cart : Book[] = [];
+  // cart : Book[] = [];
 
   ngOnInit(): void {
 
   }
 
-  showBooks() {
-    this.isShowing = !this.isShowing;
-  }
+  // showBooks() {
+  //   this.isShowing = !this.isShowing;
+  // }
 // myName : string = '';
 // handleInput(event: any){
 //     this.myName = event.target.value;
 // }
 
-  addToCart(book: Book) {
-    console.log(book);
-  }
+  // addToCart(book: Book) {
+  //   console.log(book);
+  // }
 
 }

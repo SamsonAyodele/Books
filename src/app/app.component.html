@@ -1,1 +1,19 @@
-<app-books></app-books>
+<!-- <app-books></app-books>
+<app-cart></app-cart> -->
+<nav class="flex justify-between p-4 bg-purple-500 text-white">
+
+  <div>
+    <a routerLink="/"> Books Shop </a>
+  </div>
+
+  <div>
+    <a class="mx-4" routerLink="cart"> My cart </a>
+    <a class="mx-4" routerLink="login"> Login </a>
+    <a class="mx-4" routerLink="register"> Register </a>
+  </div>
+
+</nav>
+<div class="p-4">
+  <router-outlet></router-outlet>
+</div>
+
